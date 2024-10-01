@@ -1,4 +1,4 @@
-# bitspanindia_assignment
+#Grocery Application
 
 A new Flutter project.
 
