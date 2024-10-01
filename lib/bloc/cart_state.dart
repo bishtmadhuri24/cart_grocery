@@ -5,7 +5,7 @@ abstract class CartState {}
 class CartLoading extends CartState {}
 
 class CartLoaded extends CartState {
-  final Map<Product, dynamic> products; // Map of products and their quantities
+  final Map<Product, int> products; // Map of products and their quantities
 
   CartLoaded(this.products);
 

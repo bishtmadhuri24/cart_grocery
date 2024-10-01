@@ -19,12 +19,14 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  final cartDatabaseHelper = CartDatabaseHelper();
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: BlocProvider(
-        create: (context) => CartBloc()..add(LoadCart()),
+        create: (context) => CartBloc(databaseHelper: cartDatabaseHelper)..add(LoadCart()),
         child: HomeScreen(),
       ),
 
